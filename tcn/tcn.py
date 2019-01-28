@@ -243,7 +243,7 @@ def compiled_tcn(num_feat,  # type: int
         print('Adam with norm clipping.')
     else:
         # regression
-        x = Dense(1)(x)
+        x = Dense(num_classes)(x)
         x = Activation('linear')(x)
         output_layer = x
         print(f'model.x = {input_layer.shape}')
